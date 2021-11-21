@@ -32,6 +32,8 @@ public class Main {
 			if (param != null)
 				System.out.println(ConeFactory.create(param));
 		}
+		
+		System.out.println("");
 
 		// List<Cone>
 		// cones2=params.stream().map(ConeFactory::create).collect(Collectors.toList());
