@@ -25,15 +25,15 @@ public class ConeFileReader implements ShapeReader {
 			throw new ConeException("There is no file path to read data");
 		}
 
-		List<String> result;
 		Path filePath = Paths.get(path);
+		List<String> result;
+
 		try {
-			result = Files.lines(filePath, StandardCharsets.UTF_8)
-					.filter(ConeStringValidator::isConeStringValid)
+			result = Files.lines(filePath, StandardCharsets.UTF_8).filter(ConeStringValidator::isConeStringValid)
 					.collect(Collectors.toList());
 		} catch (IOException e) {
 			log.error("Error when reading file with source data from " + path);
-			throw new ConeException("Error when reading file with source data", e);
+			throw new ConeException("Error when reading file with source data " + path, e);
 		}
 		log.info("File read successfully");
 		return result;

@@ -1,37 +1,46 @@
 package by.epam.jwdTask1.parser.impl;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import by.epam.jwdTask1.exception.ConeException;
 import by.epam.jwdTask1.parser.ShapeParser;
 import by.epam.jwdTask1.validator.ConeParametersValidator;
+import by.epam.jwdTask1.validator.ConeStringValidator;
 
 public class ConeParser implements ShapeParser {
 
 	private final static String DELIMITER_REGEX = "\\s+";
-	private final static Logger log = LogManager.getLogger();
 
 	@Override
-	public double[] parse(String line) throws ConeException {
+	public Optional<double[]> parse(String line) {
 
-		if (line == null || line.isBlank()) {
-			log.error("There is no string for parsing");
-			throw new ConeException("There is no string for parsing");
-		}
+		return Optional.ofNullable(line).filter(ConeStringValidator::isConeStringValid)
+				.map(l -> l.trim().split(DELIMITER_REGEX))
+				.map(splitedString -> Stream.of(splitedString).mapToDouble(Double::parseDouble).toArray())
+				.filter(ConeParametersValidator::isConeParamValid);
 
-		String[] splitedLine = line.trim().split(DELIMITER_REGEX);
-		double[] result = null;
-		try {
-			result = Stream.of(splitedLine).mapToDouble(Double::parseDouble).toArray();
-			log.info("Line parsed successfully");
-		} catch (Exception e) {
-			log.error("There is error when parsing string to double");
-		}
-		return ConeParametersValidator.isConeParamValid(result) ? result : null;
+		// TODO
+		/*
+		 * String[] splitedLine = line.trim().split(DELIMITER_REGEX); double[] result =
+		 * null; try { result =
+		 * Stream.of(splitedLine).mapToDouble(Double::parseDouble).toArray();
+		 * log.info("Line parsed successfully"); } catch (Exception e) {
+		 * log.error("There is error when parsing string to double"); } return
+		 * ConeParametersValidator.isConeParamValid(result) ? result : null;
+		 */
+	}
+
+	@Override
+	public Optional<List<double[]>> parse(List<String> lines) {
+
+		return Optional.ofNullable(lines.stream().filter(ConeStringValidator::isConeStringValid)
+				.map(line -> line.trim().split(DELIMITER_REGEX))
+				.map(splitedString -> Stream.of(splitedString).mapToDouble(Double::parseDouble).toArray())
+				.filter(ConeParametersValidator::isConeParamValid)
+				.collect(Collectors.toList()));
+
 	}
 
 }
