@@ -23,7 +23,7 @@
 			filePattern="logs/${date:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}_%i.log">
 			<PatternLayout pattern="${pattern_file}" />
 			<Policies>
-				<SizeBasedTriggeringPolic size="15 KB" />
+				<SizeBasedTriggeringPolic size="2 KB" />
 			</Policies>
 			<DefaultRolloverStrategy max="10" />
 		</RollingFile>
@@ -33,8 +33,8 @@
 			<PatternLayout pattern="${pattern_file}" />
 			<BurstFilter level="INFO" rate="16" maxBurst="100" />
 			<Policies>
-				<SizeBasedTriggeringPolic size="15 KB" />
-			</Policies>
+				<SizeBasedTriggeringPolic size="2 KB" />
+			</Policies> 
 			<DefaultRolloverStrategy max="10" />
 		</RollingFile>
 	</Appenders>

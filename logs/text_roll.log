@@ -1,102 +1,44 @@
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.reader.impl.ConeFileReader - File read successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong radius or height value
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:03:00 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong coordinate of cone.
-2021-11-21 15:03:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:03:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:03:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:03:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:03:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:03:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.reader.impl.ConeFileReader - File read successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong radius or height value
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] INFO 
-			epam.jwdTask1.parser.impl.ConeParser - Line parsed successfully
-2021-11-21 15:07:11 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong coordinate of cone.
-2021-11-21 15:07:11 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:07:11 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:07:11 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:07:11 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:07:11 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-21 15:07:11 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:27:00 [main] INFO 
-			epam.jwdTask1.reader.impl.ConeFileReader - File read successfully
-2021-11-22 16:27:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:27:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:27:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:27:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:27:00 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:27:00 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong radius or height value
-2021-11-22 16:27:00 [main] ERROR
-			by.epam.jwdTask1.factory.ConeFactory - Wrong parameters when creating new Cone
-2021-11-22 16:32:52 [main] INFO 
-			epam.jwdTask1.reader.impl.ConeFileReader - File read successfully
-2021-11-22 16:32:52 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong radius or height value
-2021-11-22 16:32:52 [main] WARN 
-			by.epam.jwdTask1.validator.ConeParametersValidator - Not validated. Wrong coordinate of cone.
-2021-11-22 16:32:52 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:32:52 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:32:52 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:32:52 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:32:52 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
-2021-11-22 16:32:52 [main] INFO 
-			by.epam.jwdTask1.factory.ConeFactory - New Cone created successfully
+2021-11-23 17:03:46 [main] ERROR
+			epam.jwdshape.reader.impl.ConeFileReader - There is no file path to read data
+2021-11-23 17:04:20 [main] ERROR
+			epam.jwdshape.reader.impl.ConeFileReader - There is no file path to read data
+2021-11-23 17:10:53 [main] ERROR
+			epam.jwdshape.reader.impl.ConeFileReader - There is no file path to read data
+2021-11-23 17:14:32 [main] ERROR
+			epam.jwdshape.reader.impl.ConeFileReader - There is no file path to read data
+2021-11-23 17:20:05 [main] INFO 
+			epam.jwdshape.reader.impl.ConeFileReader - File read successfully
+2021-11-23 17:20:05 [main] WARN 
+			epam.jwdshape.validator.impl.ConeParametersValidatorImpl - Not validated. Wrong radius or height value.
+2021-11-23 17:20:05 [main] WARN 
+			epam.jwdshape.validator.impl.ConeParametersValidatorImpl - Not validated. Wrong coordinate of cone.
+2021-11-23 17:20:05 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 17:20:05 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 17:20:05 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 17:20:05 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 17:20:05 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 17:20:05 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 23:17:10 [main] INFO 
+			epam.jwdshape.reader.impl.ConeFileReader - File read successfully
+2021-11-23 23:17:10 [main] WARN 
+			epam.jwdshape.validator.impl.ConeParametersValidatorImpl - Not validated. Wrong radius or height value.
+2021-11-23 23:17:10 [main] WARN 
+			epam.jwdshape.validator.impl.ConeParametersValidatorImpl - Not validated. Wrong coordinate of cone.
+2021-11-23 23:17:10 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 23:17:10 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 23:17:10 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 23:17:10 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 23:17:10 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
+2021-11-23 23:17:10 [main] INFO 
+			by.epam.jwdshape.factory.ConeFactory - New Cone created successfully
