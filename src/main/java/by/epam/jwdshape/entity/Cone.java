@@ -1,21 +1,25 @@
 package by.epam.jwdshape.entity;
 
 import by.epam.jwdshape.exception.ConeException;
+import by.epam.jwdshape.observer.ConeEvent;
+import by.epam.jwdshape.observer.ConeObservable;
+import by.epam.jwdshape.observer.ConeObserver;
 import by.epam.jwdshape.util.ConeIdGenerator;
 import by.epam.jwdshape.validator.ConeParametersValidator;
 import by.epam.jwdshape.validator.impl.ConeParametersValidatorImpl;
 
-public class Cone {
+public class Cone implements ConeObservable {
 
 	private final long id;
 	private Point center;
 	private double radius;
 	private double height;
+	private ConeObserver observer;
 
 	public Cone(Point center, double radius, double height) throws ConeException {
-		ConeParametersValidator validator=new ConeParametersValidatorImpl();
-		if(!validator.isConeParamValid(center.getX(), center.getY(), center.getZ(), radius, height)) {
-			throw new ConeException();			
+		ConeParametersValidator validator = new ConeParametersValidatorImpl();
+		if (!validator.isConeParamValid(center.getX(), center.getY(), center.getZ(), radius, height)) {
+			throw new ConeException();
 		}
 		this.id = ConeIdGenerator.generateId();
 		this.center = center;
@@ -41,6 +45,7 @@ public class Cone {
 
 	public void setRadius(double radius) {
 		this.radius = radius;
+		notifyObservers();
 	}
 
 	public double getHeight() {
@@ -49,6 +54,7 @@ public class Cone {
 
 	public void setHeight(double height) {
 		this.height = height;
+		notifyObservers();
 	}
 
 	@Override
@@ -103,6 +109,22 @@ public class Cone {
 		stringBuilder.append(height);
 		stringBuilder.append("]");
 		return stringBuilder.toString();
+	}
+
+	@Override
+	public void attach(ConeObserver observer) {
+		this.observer = observer;
+	}
+
+	@Override
+	public void detach() {
+		this.observer = null;
+	}
+
+	@Override
+	public void notifyObservers() {
+		ConeEvent coneEvent = new ConeEvent(this);
+		observer.parametersChanged(coneEvent);
 	}
 
 }

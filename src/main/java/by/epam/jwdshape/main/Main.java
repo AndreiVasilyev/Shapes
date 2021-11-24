@@ -33,11 +33,7 @@ public class Main {
 			if (param != null)
 				System.out.println(ConeFactory.create(param));
 		}
-
-		// List<Cone>
-		// cones2=params.stream().map(ConeFactory::create).collect(Collectors.toList());
-
-		// cones.stream().map(line->parser.parse(line);)
+		
 		Repository rep = RepositoryImpl.getInstance();
 		rep.add(new Cone(new Point(2, 3, 4), 5, 8));
 		
