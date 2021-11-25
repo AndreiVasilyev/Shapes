@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -32,7 +31,7 @@ public class ConeFileReader implements ShapeReader {
 		ConeStringValidator coneStringValidator = new ConeStringValidatorImpl();
 		try {
 			result = Files.lines(filePath, StandardCharsets.UTF_8).filter(coneStringValidator::isConeStringValid)
-					.collect(Collectors.toList());
+					.toList();
 		} catch (IOException e) {
 			log.error("Error when reading file with source data from " + path);
 			throw new ConeException("Error when reading file with source data " + path, e);
