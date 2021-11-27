@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="by.epam.jwdshape.parser.ConeParserTest">
+      <class name="by.epam.jwdshape.factory.ConeFactoryTest">
         <methods>
-          <include name="setupParser"/>
-          <include name="testNullSourceList"/>
+          <include name="testIncorrectCreateConeByDoubleArray"/>
         </methods>
-      </class> <!-- by.epam.jwdshape.parser.ConeParserTest -->
+      </class> <!-- by.epam.jwdshape.factory.ConeFactoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

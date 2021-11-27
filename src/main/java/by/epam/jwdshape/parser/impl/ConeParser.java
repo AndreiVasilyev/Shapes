@@ -2,7 +2,6 @@ package by.epam.jwdshape.parser.impl;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import by.epam.jwdshape.parser.ShapeParser;
@@ -29,12 +28,15 @@ public class ConeParser implements ShapeParser {
 	@Override
 	public Optional<List<double[]>> parse(List<String> lines) {
 
+		if (lines == null) {
+			return Optional.empty();
+		}
 		ConeStringValidator coneStringValidator = new ConeStringValidatorImpl();
 		ConeParametersValidator coneParametersValidator = new ConeParametersValidatorImpl();
 		return Optional.ofNullable(lines.stream().filter(coneStringValidator::isConeStringValid)
 				.map(line -> line.trim().split(DELIMITER_REGEX))
 				.map(splitedString -> Stream.of(splitedString).mapToDouble(Double::parseDouble).toArray())
-				.filter(coneParametersValidator::isConeParamValid).collect(Collectors.toList()));
+				.filter(coneParametersValidator::isConeParamValid).toList());
 
 	}
 

@@ -15,7 +15,7 @@ public class RepositoryImpl implements Repository {
 	private List<Cone> cones;
 
 	private RepositoryImpl() {
-		cones = new ArrayList<Cone>();
+		cones = new ArrayList<>();
 	}
 
 	public static Repository getInstance() {
@@ -25,6 +25,7 @@ public class RepositoryImpl implements Repository {
 		return instance;
 	}
 
+	@Override
 	public List<Cone> get() {
 		return List.copyOf(cones);
 	}
@@ -35,8 +36,8 @@ public class RepositoryImpl implements Repository {
 	}
 
 	@Override
-	public boolean addAll(Collection<Cone> cones) {
-		return cones.addAll(cones);
+	public boolean addAll(Collection<Cone> sourceCones) {
+		return cones.addAll(sourceCones);
 	}
 
 	@Override
@@ -45,13 +46,18 @@ public class RepositoryImpl implements Repository {
 	}
 
 	@Override
-	public boolean removeAll(Collection<Cone> cones) {
-		return cones.removeAll(cones);
+	public boolean removeAll(Collection<Cone> sourceCones) {
+		return cones.removeAll(sourceCones);
 	}
 
 	@Override
 	public Cone get(int index) {
 		return cones.get(index);
+	}
+	
+	@Override
+	public void clear() {
+		cones.clear();
 	}
 
 	@Override
@@ -68,5 +74,7 @@ public class RepositoryImpl implements Repository {
 	public List<Cone> sort(Comparator<? super Cone> comparator) {
 		return cones.stream().sorted(comparator).toList();
 	}
+
+	
 
 }

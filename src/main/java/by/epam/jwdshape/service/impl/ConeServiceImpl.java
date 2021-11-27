@@ -47,7 +47,7 @@ public class ConeServiceImpl implements ConeService {
 		}
 
 		ConeParametersValidator validator = new ConeParametersValidatorImpl();
-		if (!validator.isCutConeHeightValid(cutConeHeight)) {
+		if (!validator.isCutConeHeightValid(cutConeHeight,cone.getHeight())) {
 			log.error("Wrong cut cone height when calculate cut cone volume ratio");
 			throw new ConeException("Wrong cut cone height when calculate cut cone volume ratio");
 		}

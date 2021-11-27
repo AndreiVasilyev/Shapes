@@ -2,10 +2,10 @@ package by.epam.jwdshape.observer;
 
 public interface ConeObservable {
 
-	public void attach(ConeObserver observer);
+	void attach(ConeObserver observer);
 
-	public void detach();
+	void detach();
 
-	public void notifyObservers();
+	void notifyObservers();
 
 }

@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-25T16:22:00 MSK" name="Default suite" finished-at="2021-11-25T16:22:00 MSK" duration-ms="460">
+  <suite started-at="2021-11-28T00:19:40 MSK" name="Default suite" finished-at="2021-11-28T00:19:41 MSK" duration-ms="415">
     <groups>
     </groups>
-    <test started-at="2021-11-25T16:22:00 MSK" name="Default test" finished-at="2021-11-25T16:22:00 MSK" duration-ms="460">
-      <class name="by.epam.jwdshape.parser.ConeParserTest">
-        <test-method is-config="true" signature="setupParser()[pri:0, instance:by.epam.jwdshape.parser.ConeParserTest@79b06cab]" started-at="2021-11-25T16:22:00 MSK" name="setupParser" finished-at="2021-11-25T16:22:00 MSK" duration-ms="6" status="PASS">
+    <test started-at="2021-11-28T00:19:40 MSK" name="Default test" finished-at="2021-11-28T00:19:41 MSK" duration-ms="415">
+      <class name="by.epam.jwdshape.factory.ConeFactoryTest">
+        <test-method signature="testCorrectCreateConeByDoubleArray()[pri:0, instance:by.epam.jwdshape.factory.ConeFactoryTest@25d250c6]" started-at="2021-11-28T00:19:40 MSK" name="testCorrectCreateConeByDoubleArray" finished-at="2021-11-28T00:19:41 MSK" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupParser -->
-        <test-method signature="testNullSourceList()[pri:0, instance:by.epam.jwdshape.parser.ConeParserTest@79b06cab]" started-at="2021-11-25T16:22:00 MSK" name="testNullSourceList" finished-at="2021-11-25T16:22:00 MSK" duration-ms="420" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        </test-method> <!-- testCorrectCreateConeByDoubleArray -->
+        <test-method signature="testCorrectCreateConeByParameters()[pri:0, instance:by.epam.jwdshape.factory.ConeFactoryTest@25d250c6]" started-at="2021-11-28T00:19:41 MSK" name="testCorrectCreateConeByParameters" finished-at="2021-11-28T00:19:41 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCorrectCreateConeByParameters -->
+        <test-method signature="testCorrectCreateConeByPointAndParameters()[pri:0, instance:by.epam.jwdshape.factory.ConeFactoryTest@25d250c6]" started-at="2021-11-28T00:19:41 MSK" name="testCorrectCreateConeByPointAndParameters" finished-at="2021-11-28T00:19:41 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCorrectCreateConeByPointAndParameters -->
+        <test-method signature="testIncorrectCreateConeByDoubleArray()[pri:0, instance:by.epam.jwdshape.factory.ConeFactoryTest@25d250c6]" started-at="2021-11-28T00:19:41 MSK" name="testIncorrectCreateConeByDoubleArray" finished-at="2021-11-28T00:19:41 MSK" duration-ms="4" status="PASS">
+          <exception class="by.epam.jwdshape.exception.ConeException">
             <message>
-              <![CDATA[Cannot invoke "java.util.List.stream()" because "lines" is null]]>
+              <![CDATA[Wrong parameters when creating new Cone]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "lines" is null
-at by.epam.jwdshape.parser.impl.ConeParser.parse(ConeParser.java:34)
-at by.epam.jwdshape.parser.ConeParserTest.testNullSourceList(ConeParserTest.java:50)
+              <![CDATA[by.epam.jwdshape.exception.ConeException: Wrong parameters when creating new Cone
+at by.epam.jwdshape.factory.ConeFactory.create(ConeFactory.java:21)
+at by.epam.jwdshape.factory.ConeFactoryTest.testIncorrectCreateConeByDoubleArray(ConeFactoryTest.java:23)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -50,11 +58,97 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- by.epam.jwdshape.exception.ConeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNullSourceList -->
-      </class> <!-- by.epam.jwdshape.parser.ConeParserTest -->
+        </test-method> <!-- testIncorrectCreateConeByDoubleArray -->
+        <test-method signature="testIncorrectCreateConeByParameters()[pri:0, instance:by.epam.jwdshape.factory.ConeFactoryTest@25d250c6]" started-at="2021-11-28T00:19:41 MSK" name="testIncorrectCreateConeByParameters" finished-at="2021-11-28T00:19:41 MSK" duration-ms="1" status="PASS">
+          <exception class="by.epam.jwdshape.exception.ConeException">
+            <message>
+              <![CDATA[Wrong parameters when creating new Cone]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.jwdshape.exception.ConeException: Wrong parameters when creating new Cone
+at by.epam.jwdshape.factory.ConeFactory.create(ConeFactory.java:36)
+at by.epam.jwdshape.factory.ConeFactoryTest.testIncorrectCreateConeByParameters(ConeFactoryTest.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.jwdshape.exception.ConeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIncorrectCreateConeByParameters -->
+        <test-method signature="testIncorrectCreateConeByPointParameters()[pri:0, instance:by.epam.jwdshape.factory.ConeFactoryTest@25d250c6]" started-at="2021-11-28T00:19:41 MSK" name="testIncorrectCreateConeByPointParameters" finished-at="2021-11-28T00:19:41 MSK" duration-ms="1" status="PASS">
+          <exception class="by.epam.jwdshape.exception.ConeException">
+            <message>
+              <![CDATA[Wrong parameters when creating new Cone]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[by.epam.jwdshape.exception.ConeException: Wrong parameters when creating new Cone
+at by.epam.jwdshape.factory.ConeFactory.create(ConeFactory.java:50)
+at by.epam.jwdshape.factory.ConeFactoryTest.testIncorrectCreateConeByPointParameters(ConeFactoryTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- by.epam.jwdshape.exception.ConeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIncorrectCreateConeByPointParameters -->
+      </class> <!-- by.epam.jwdshape.factory.ConeFactoryTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

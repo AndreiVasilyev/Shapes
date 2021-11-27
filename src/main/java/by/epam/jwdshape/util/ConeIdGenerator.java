@@ -11,4 +11,8 @@ public class ConeIdGenerator {
 		return ++counter;
 	}
 
+	public static void reset() {
+		counter = 0;
+	}
+
 }

@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public interface ShapeParser {
 
-	public Optional<double[]> parse(String line);
+	Optional<double[]> parse(String line);
 
-	public Optional<List<double[]>> parse(List<String> lines);
+	Optional<List<double[]>> parse(List<String> lines);
 }

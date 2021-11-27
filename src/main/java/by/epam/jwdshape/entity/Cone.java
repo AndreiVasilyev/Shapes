@@ -123,6 +123,9 @@ public class Cone implements ConeObservable {
 
 	@Override
 	public void notifyObservers() {
+		if (observer == null) {
+			return;
+		}
 		ConeEvent coneEvent = new ConeEvent(this);
 		observer.parametersChanged(coneEvent);
 	}

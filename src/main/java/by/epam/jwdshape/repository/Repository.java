@@ -8,19 +8,23 @@ import by.epam.jwdshape.entity.Cone;
 
 public interface Repository {
 
-	public boolean add(Cone cone);
+	boolean add(Cone cone);
 
-	public boolean addAll(Collection<Cone> cones);
+	boolean addAll(Collection<Cone> cones);
 
-	public boolean remove(Cone cone);
+	boolean remove(Cone cone);
 
-	public boolean removeAll(Collection<Cone> cones);
+	boolean removeAll(Collection<Cone> cones);
 
-	public Cone get(int index);
+	Cone get(int index);
 
-	public Cone set(int index, Cone cone);
+	Cone set(int index, Cone cone);
 
-	public List<Cone> query(Specification specification);
+	List<Cone> query(Specification specification);
 
-	public List<Cone> sort(Comparator<? super Cone> comparator);
+	List<Cone> sort(Comparator<? super Cone> comparator);
+
+	List<Cone> get();
+
+	void clear();
 }
